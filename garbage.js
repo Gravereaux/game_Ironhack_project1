@@ -1,5 +1,5 @@
 const garbageImage = new Image();
-garbageImage.src = "/images/garbage1.png"; //30 x 30, 1 image
+garbageImage.src = "images/garbage1.png"; //30 x 30, 1 image
 
 class Garbage {
   constructor(game) {

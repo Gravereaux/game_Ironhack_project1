@@ -1,5 +1,5 @@
 const playerImage = new Image();
-playerImage.src = "/images/diver1.png"; //128 x 30 , 4  images
+playerImage.src = "images/diver1.png"; //128 x 30 , 4  images
 
 class Player {
   constructor(game) {

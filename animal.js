@@ -1,5 +1,5 @@
 const animalImage = new Image();
-animalImage.src = "/images/animal.png"; //96 x 32, 3 images
+animalImage.src = "images/animal.png"; //96 x 32, 3 images
 
 class Animal {
   constructor(game) {
