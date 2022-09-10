@@ -11,20 +11,19 @@
     <div id="start-screen" class="screen">
       <h1>The Ocean Cleanup</h1>
       <p>Pick up garbage avoid disturbing animals</p>
-      <button>Start Game</button>
+      <img src="images/diver1.png" alt="diver" />
       <div id="instructions">
         <h1>Instructions</h1>
-        <p>Intersecting with garbage + 1 point</p>
-        <p>Garbage have fallen on the Seabed - 1 point</p>
-        <p>Intersecting with an Animal - 1 point</p>
+        <p>Intersecting with garbage <span>+ 1 point</span></p>
+        <p>Garbage have fallen on the ocean floor <span>- 1 point</span></p>
+        <p>Intersecting with an Animal <span>- 1 point</span></p>
       </div>
+
+      <button>Start Game</button>
     </div>
 
     <div id="game-screen" class="screen" style="display: none">
-      <div id="score">
-        <h1>Your score:</h1>
-      </div>
-      <canvas width="600" height="400"></canvas>
+      <canvas width="800" height="400"></canvas>
     </div>
 
     <div id="game-over-screen" class="screen" style="display: none">
@@ -36,7 +35,6 @@
     <script src="garbage.js"></script>
     <script src="player.js"></script>
     <script src="game.js"></script>
-
     <script src="script.js"></script>
   </body>
 </html>

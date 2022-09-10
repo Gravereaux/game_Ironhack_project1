@@ -26,16 +26,16 @@ class Game {
     window.addEventListener("keydown", (event) => {
       switch (event.code) {
         case "ArrowUp":
-          this.player.y -= 7;
+          this.player.y -= 1;
           break;
         case "ArrowDown":
-          this.player.y += 7;
+          this.player.y += 1;
           break;
         case "ArrowLeft":
-          this.player.x -= 7;
+          this.player.x -= 1;
           break;
         case "ArrowRight":
-          this.player.x += 7;
+          this.player.x += 1;
           break;
       }
     });
@@ -71,14 +71,17 @@ class Game {
   }
 
   drawScore() {
-    this.context.font = "20px sans-serif";
-    this.context.fillStyle = "black";
-    this.context.fillText(this.score, 100, 100);
+
+
+    this.context.font = "15px sans-serif";
+    this.context.fillStyle = "white";
+    this.context.fillText("Your score: ", 50, 30);
+    this.context.fillText(this.score, 130, 30);
   }
 
   draw() {
     this.frame++;
-    this.context.clearRect(0, 0, 600, 400);
+    this.context.clearRect(0, 0, 800, 400);
     this.player.draw();
 
     for (const animal of this.animals) {

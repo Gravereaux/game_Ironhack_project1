@@ -4,7 +4,7 @@ animalImage.src = "images/animal.png"; //96 x 32, 3 images
 class Animal {
   constructor(game) {
     this.game = game;
-    this.x = 600;
+    this.x = 800;
     this.y = Math.random() * 400;
     this.width = 20;
     this.height = 20;

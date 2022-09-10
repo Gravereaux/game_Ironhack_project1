@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: "verdana", sans-serif;
 }
 
 body {
@@ -10,18 +11,91 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(images/ocean-plastic-bg.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 canvas {
   background-color: #176ee1;
+
 }
 
 .screen {
-  width: 600px;
+  width: 800px;
   height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #85b7d6;
+  background-color: #40c3ca;
+  border-radius: 15px;
+  
+}
+
+#start-screen h1 {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #08164e;
+}
+
+#start-screen p {
+  font-size: 13px;
+}
+
+#start-screen #instructions h1 {
+  font-size: 13px;
+}
+
+#start-screen #instructions p {
+  font-size: 10px;
+}
+
+#start-screen #instructions {
+  width: 270px;
+  height: 120px;
+  background-color: #2aaab1;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #042a2c;
+}
+
+#start-screen button {
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #016a6f;
+  color: #b1f2f6;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+#start-screen img {
+  height: 50px;
+  margin: 10px auto;
+}
+
+#game-over-screen button {
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #016a6f;
+  color: #b1f2f6;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+#game-over-screen h2 {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #026459;
+}
+
+canvas {
+  border-radius: 15px;
 }

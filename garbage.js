@@ -4,11 +4,11 @@ garbageImage.src = "images/garbage1.png"; //30 x 30, 1 image
 class Garbage {
   constructor(game) {
     this.game = game;
-    this.x = Math.random() * 600;
+    this.x = Math.random() * 800;
     this.y = 0;
     this.width = 30;
     this.height = 30;
-    this.speed = Math.random() + 0.1;
+    this.speed = Math.random() + 0.005;
   }
 
   checkForIntersection(item) {
