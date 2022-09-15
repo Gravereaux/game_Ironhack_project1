@@ -17,8 +17,7 @@ body {
 }
 
 canvas {
-  background-image: url(images/bg.png);
-
+  background-image: url(images/background/1.png);
 }
 
 .screen {
@@ -30,7 +29,6 @@ canvas {
   align-items: center;
   background-color: #40c3ca;
   border-radius: 15px;
-  
 }
 
 #start-screen h1 {

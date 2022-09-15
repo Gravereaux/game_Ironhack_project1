@@ -8,6 +8,25 @@ class Game {
 
     this.enableControls();
     this.reset();
+    this.background = [];
+  }
+
+  addBackground() {
+    // should also accept a x parameter for the new background
+    let initialX;
+
+    if (this.background.length > 0 && this.background.length <= 1) {
+      initialX = this.background[0].x + this.background[0].width;
+      this.background.push(new Background(this, initialX));
+
+      if (this.background[0].x + this.background[0].width <= 0) {
+        this.background.splice(0, 1);
+      }
+    } else if (this.background.length === 0) {
+      initialX = 0;
+      this.background.push(new Background(this, initialX));
+      console.log("this.background: ", this.background);
+    }
   }
 
   reset() {
@@ -56,6 +75,13 @@ class Game {
   }
 
   runLogic() {
+    // here, instead of generating a new background in the this.background array when the length is zero, we should generate a new background when the x + with position of the existing background is less than the width of the canvas. Then, we should generate a new background and place it right next to the existing one.
+    this.addBackground();
+   
+    for (const background of this.background) {
+      background.runLogic();
+    }
+
     this.possiblyAddAnimal();
     for (const animal of this.animals) {
       animal.runLogic();
@@ -71,8 +97,6 @@ class Game {
   }
 
   drawScore() {
-
-
     this.context.font = "15px sans-serif";
     this.context.fillStyle = "white";
     this.context.fillText("Your score: ", 50, 30);
@@ -82,6 +106,10 @@ class Game {
   draw() {
     this.frame++;
     this.context.clearRect(0, 0, 800, 400);
+
+    for (const background of this.background) {
+      background.draw();
+    }
     this.player.draw();
 
     for (const animal of this.animals) {
@@ -91,6 +119,7 @@ class Game {
     for (const garbage of this.garbages) {
       garbage.draw();
     }
+
     this.drawScore();
   }
 
