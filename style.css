@@ -17,7 +17,7 @@ body {
 }
 
 canvas {
-  background-color: #176ee1;
+  background-image: url(images/bg.png);
 
 }
 

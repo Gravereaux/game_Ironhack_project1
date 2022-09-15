@@ -1,6 +1,9 @@
 const animalImage = new Image();
 animalImage.src = "images/animal.png"; //96 x 32, 3 images
 
+const fishImage = new Image();
+fishImage.src = "images/fish.png"; //99 x 36, 3 images
+
 class Animal {
   constructor(game) {
     this.game = game;
@@ -9,6 +12,7 @@ class Animal {
     this.width = 20;
     this.height = 20;
     this.speed = Math.random() + 0.05;
+    this.image = animalImage;
   }
 
   checkForIntersection(item) {
@@ -44,5 +48,13 @@ class Animal {
       this.width,
       this.height
     );
+  }
+}
+
+class Fish extends Animal {
+  constructor(game, speed, image) {
+    super(game, speed, image);
+    this.speed = Math.random() + 0.1;
+    this.image = fishImage;
   }
 }

@@ -1,22 +1,22 @@
 const backgroundImage = new Image();
-backgroundImage.src = "images/bg02.png"; //1600 x 400, 2 images
+backgroundImage.src = "images/bg.png"; //1600 x 400, 2 images
 
 class Background {
   constructor(game) {
     this.game = game;
-    this.x = 800;
-    this.y = 400;
-    this.width = 800;
-    this.height = 400;
-    this.speed =2;
+    this.x = 0;
+    this.y = 0;
+  }
+  runLogic() {
+    this.x -= 0.5;
   }
 
   draw() {
     this.game.context.drawImage(
       backgroundImage,
-      800 * 2,
       0,
-      800,
+      0,
+      1600,
       400,
       this.x,
       this.y,
